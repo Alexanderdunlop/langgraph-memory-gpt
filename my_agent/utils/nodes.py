@@ -24,6 +24,14 @@ def _get_model(model_name: str):
     return model
 
 def should_continue(state):
+    """Determine whether to use tools or end the conversation based on the last message.
+    
+    Args:
+        state (schemas.State): The current state of the conversation.
+
+    Returns:
+        str: "end" if the conversation should end, "continue" if tools should be used.
+    """
     messages = state["messages"]
     last_message = messages[-1]
     if not last_message.tool_calls:

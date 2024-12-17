@@ -23,3 +23,7 @@ tiktoken = "^0.8.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+start = "my_agent.main:main"
