@@ -18,7 +18,7 @@ workflow.add_conditional_edges(
     {
         "continue": "tools",
         "end": END,
-    },
+    }
 )
 workflow.add_edge("tools", "agent")
 
